@@ -24,6 +24,7 @@ jobs:
 
       - name: Setup Gradle
         run: | 
+          ./gradlew wrapper --gradle-version 7.6
           sed -i -e 's/\r$//' gradlew 
           chmod +x gradlew
           chmod +x gradle/wrapper/gradle-wrapper.jar 
