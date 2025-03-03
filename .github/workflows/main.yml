@@ -23,7 +23,10 @@ jobs:
           java-version: '17'
 
       - name: Setup Gradle
-        run: chmod +x gradlew && chmod +x gradle/wrapper/gradle-wrapper.jar sed -i -e 's/\r$//' gradlew
+        run: | 
+          sed -i -e 's/\r$//' gradlew 
+          chmod +x gradlew
+          chmod +x gradle/wrapper/gradle-wrapper.jar 
 
       - name: Build APK
         run: ./gradlew assembleDebug
