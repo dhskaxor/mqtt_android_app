@@ -23,7 +23,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Gradle
-        run: chmod +x gradlew
+        run: chmod +x gradlew && chmod +x gradle/wrapper/gradle-wrapper.jar        
 
       - name: Build APK
         run: ./gradlew assembleDebug
